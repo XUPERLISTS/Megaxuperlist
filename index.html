@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEGAXUPERLIST</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #c640a5;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .title {
+            color: #ffffff;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin-bottom: 2rem;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .search-input {
+            padding: 0.8em 1.2em;
+            border-radius: 2em;
+            border: none;
+            font-size: 1rem;
+            width: 300px;
+        }
+
+        .button {
+            display: block;
+            padding: 0.8em 1.2em;
+            margin-bottom: 0.5rem;
+            border-radius: 2em;
+            text-decoration: none;
+            font-weight: 300;
+            color: #ffffff;
+            background-color: #111211;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .button:hover {
+            background-color: #000000;
+        }
+
+        .footer {
+            background-color: #111211;
+            color: #ffffff;
+            padding: 1rem;
+            text-align: center;
+            font-size: 0.8rem;
+            width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .button {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">" MEGAXUPERLIST "</h2>
+        <img class="logo" src="https://i.postimg.cc/XNPPbk75/logo7-24-93824.png" alt="">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Buscar canal..." onkeyup="searchChannels()">
+        </div>
+        <div class="channel-list">
+            <a class="button" href="https://daddylive.dad/embed/stream-1.php">TNT SPORT 1</a>
+            <a class="button" href="https://daddylive.dad/embed/stream-2.php">TNT SPORT 1</a>
+            <a class="button" href="https://daddylive.dad/embed/stream-3.php">TNT SPORT 1</a>
+            <a class="button" href="https://daddylive.dad/embed/stream-4.php">Rai 1</a>
+            <a class="button" href="https://daddylive.dad/embed/stream-5.php">Rai 2</a>
+<a class="button" href="https://daddylive.dad/embed/stream-5.php">Rai 2</a>
+<a class="button" href="https://daddylive.dad/embed/stream-5.php">Rai 2</a>
+<a class="button" href="https://daddylive.dad/embed/stream-5.php">Rai 2</a>
+<a class="button" href="https://daddylive.dad/embed/stream-5.php">Rai 2</a>
+<a class="button" href="https://daddylive.dad/embed/stream-5.php">Rai 2</a>
+<a class="button" href="https://daddylive.dad/embed/stream-5.php">Rai 2</a>
+<a class="button" href="https://daddylive.dad/embed/stream-5.php">Rai 2</a>
+<a class="button" href="https://daddylive.dad/embed/stream-5.php">Rai 2</a>
+            <!-- Resto de los enlaces -->
+        </div>
+    </div>
+
+    <div class="footer">
+        @By Xuperlist -Group
+    </div>
+
+    <script>
+        function searchChannels() {
+            let searchInput = document.querySelector('.search-input').value.toLowerCase();
+            let channelButtons = document.querySelectorAll('.button');
+
+            channelButtons.forEach(button => {
+                let channelText = button.textContent.toLowerCase();
+                if (channelText.includes(searchInput)) {
+                    button.style.display = 'block';
+                } else {
+                    button.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
